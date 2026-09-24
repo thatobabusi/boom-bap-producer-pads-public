@@ -5,55 +5,32 @@
 
 <hr>
 
-# Usage
+# How to use the plugin
 
-The plugin has nine tabs, switched via the buttons in the toolbar strip
-(top-left, next to the preset controls): **PADS**, **STEMS**, **TURNTABLE**,
-**KEYS**, **SEQ**, **DISCOVER**, **ARRANGE**, **BASS**, and **MIXER**. The
-preset bar and output meter stay visible on every tab, and a **< Back**
-button next to them walks back through your last few tab switches. The
-banner shows the installed version number (e.g. `v1.123.0`) directly under
-the plugin name — check it before reporting a bug, since the
-fix you're looking for might already be in a newer build.
+This folder holds the detailed guides: one per part of the plugin, plus how
+saving works and how to run it without a DAW. For the quick tour of all nine
+tabs on one page, see [USAGE.md](../USAGE.md).
 
-![The PADS tab — the default view](../../assets/screen-shots/01-pads-tab.png)
+![The PADS tab, the default view](../../assets/screen-shots/01-pads-tab.png)
 
-```mermaid
-flowchart TD
-    TB["Toolbar (always visible)"]
-    TB --> PADS["PADS -- pad grid,\nsample browser, DSP"]
-    TB --> SEQ["SEQ -- step sequencer,\npattern generators"]
-    TB --> KEYS["KEYS -- piano roll,\nMIDI export, generators"]
-    TB --> BASS["BASS -- dedicated\nbass voice"]
-    TB --> TURN["TURNTABLE -- scratch\ndeck, Vinyl Sim"]
-    TB --> STEMS["STEMS -- frequency/\nharmonic splitting"]
-    TB --> MIX["MIXER -- console strips,\ninserts, master rack"]
-    TB --> ARR["ARRANGEMENT -- bank\ntimeline"]
-    TB --> DISC["DISCOVER -- local crate +\nYouTube Crate"]
-```
+## What's in this folder
 
-This guide is split by feature area — pick where you want to start:
+| Item | What it covers |
+|---|---|
+| [modules/](modules/README.md) | **The feature guides**, one folder per tab or tool: pads, sample editor, sound controls, sequencer, keys, turntable and Deck Chop, stems, discover, arrangement, bass, mixer, MIDI Learn and the toolbar. Start from its "what do you want to do?" table. |
+| [saving-and-standalone.md](saving-and-standalone.md) | What gets saved with your DAW project and what a preset is ([Saving your work](saving-and-standalone.md#saving-your-work)), and using the plugin as its own app with no DAW ([Running as a standalone app](saving-and-standalone.md#running-as-a-standalone-app)). |
 
-- [The toolbar](modules/toolbar/toolbar-and-presets.md) — presets, transport,
-  undo/redo, Pad Quantize, Mono/Limiter, MIDI Out, window sizing, metering, tabs
-- **PADS tab**
-    - [The pad grid & sample browser](modules/pads/pad-grid-and-browser.md)
-    - [Sample editor](modules/sample-editor/sample-editor.md) — waveform, zoom, trim, chop
-    - [DSP controls & output routing](modules/dsp-controls/dsp-controls.md) — filter,
-      envelope, pitch, FX
-- [SEQ tab](modules/step-sequencer/step-sequencer-and-roll.md) — the step
-  sequencer, Roll/note-repeat, and pattern generators
-- [STEMS tab](modules/stems/stems-tab.md) — band/HPSS splitting, pre-mix levels,
-  live preview
-- [TURNTABLE tab](modules/turntable/turntable-tab.md) — scratch deck, Vinyl Sim
-- [KEYS tab](modules/keys/keys-tab.md) — piano roll, MIDI export/import,
-  chord/melody/full-pattern generators
-- [DISCOVER tab](modules/discover/discover-tab.md) — local crate browser + YouTube
-  Crate
-- [ARRANGEMENT tab](modules/arrangement/arrangement-tab.md) — bank timeline with
-  next-action control
-- [BASS tab](modules/bass/bass-tab.md) — dedicated bass voice with glide
-- [MIXER tab](modules/mixer/mixer-tab.md) — console-style strips for every
-  sound source, insert effects, master rack
-- [MIDI Learn](modules/midi/midi-learn.md)
-- [Saving your work & running standalone](saving-and-standalone.md)
+## Your first beat, in six steps
+
+If you've never used a pad sampler before, this is the shortest path from
+nothing to a playing beat:
+
+1. **Load sounds.** On the PADS tab, point the browser at a folder of drum sounds, or drag files onto pads. See [Pads](modules/pads/README.md).
+2. **Play them.** Click the pads, or hit them on a MIDI controller.
+3. **Make a pattern.** On the SEQ tab, select the kick pad and light up some of the 16 steps, then do the same for the snare and hats. Or let **Generate...** write one for you. See [SEQ tab](modules/step-sequencer/README.md).
+4. **Press play in your DAW.** The pattern plays in time with your song (running standalone, use **Seq Play**).
+5. **Shape and balance.** Tweak each pad on the PADS tab, then balance everything on the MIXER tab. See [DSP controls](modules/dsp-controls/README.md) and [MIXER](modules/mixer/README.md).
+6. **Save it.** Save your DAW project, or save a preset to reuse the kit anywhere. See [saving-and-standalone.md](saving-and-standalone.md).
+
+Want to sample a record instead? Put it on the TURNTABLE, press Play, and
+hit **Chop** on the beat. See [Deck Chop](modules/turntable/README.md).
