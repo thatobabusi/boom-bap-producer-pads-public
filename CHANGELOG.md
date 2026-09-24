@@ -4,6 +4,35 @@ All notable changes to this project are documented here.
 Format follows [Keep a Changelog](https://keepachangelog.com/), versioning
 follows [Semantic Versioning](https://semver.org/).
 
+## [1.127.0] — 2026-09-24
+
+### Added
+- **Deck Chop** on the TURNTABLE tab: put a record on the deck, play it,
+  and hit **Chop** (or press **C**) on the beat -- every chop lands on a
+  pad straight away, ready to play. The chops show as numbered markers on
+  the record's waveform (the number is the pad), and moving a marker
+  re-cuts its pad on the spot. Tap an empty pad in the lane's mini pad
+  grid to chop onto that exact pad. Also: **Gate**, beat-grid **Snap**,
+  **1/2** / **x2** to fix a record whose tempo was read as double or half
+  time, **Offset** for by-ear timing, **Tap Pads** (chop from the PADS tab
+  or your MIDI controller), **Stretch** to your project tempo, and
+  **Export** every chop as audio files plus a MIDI file. See
+  [TURNTABLE tab → Deck Chop](https://github.com/edensfrequency/boom-bap-producer-pads/blob/main/docs/usage/modules/turntable/turntable-tab.md#deck-chop).
+
+### Fixed
+- After restarting on a 48kHz audio device, the turntable (and banks
+  B-D) could play noticeably fast, and trimmed or chopped pads could
+  start in slightly the wrong place after reopening a project. All of it
+  now stays exactly right whatever your sample rate.
+- Projects with several pads cut from the same file load faster and use
+  much less memory.
+
+## [1.126.0] — 2026-09-06
+
+### Fixed
+- The MIXER tab now shows strips for every pad in the active bank's
+  grid, not just the first 16 -- closes the limitation from v1.125.0.
+
 ## [1.125.0] — 2026-09-06
 
 ### Added
@@ -20,12 +49,6 @@ follows [Semantic Versioning](https://semver.org/).
 ### Known limitation
 - Dedicated per-pad audio outputs (for routing a pad to its own DAW
   channel) are only available for pads 1-16 regardless of grid size.
-
-## [1.126.0] — 2026-09-06
-
-### Fixed
-- The MIXER tab now shows strips for every pad in the active bank's
-  grid, not just the first 16 -- closes the limitation from v1.125.0.
 
 ## [1.124.0] — 2026-09-06
 

@@ -23,7 +23,7 @@ flowchart TD
     TB --> SEQ["SEQ -- step sequencer,\npattern generators"]
     TB --> KEYS["KEYS -- piano roll,\nMIDI export, generators"]
     TB --> BASS["BASS -- dedicated\nbass voice"]
-    TB --> TURN["TURNTABLE -- scratch\ndeck, Vinyl Sim"]
+    TB --> TURN["TURNTABLE -- scratch\ndeck, Deck Chop, Vinyl Sim"]
     TB --> STEMS["STEMS -- frequency/\nharmonic splitting"]
     TB --> MIX["MIXER -- console strips,\ninserts, master rack"]
     TB --> ARR["ARRANGEMENT -- bank\ntimeline"]
@@ -44,7 +44,8 @@ This guide is split by feature area — pick where you want to start:
   sequencer, Roll/note-repeat, and pattern generators
 - [STEMS tab](usage/modules/stems/stems-tab.md) — band/HPSS splitting, pre-mix levels,
   live preview
-- [TURNTABLE tab](usage/modules/turntable/turntable-tab.md) — scratch deck, Vinyl Sim
+- [TURNTABLE tab](usage/modules/turntable/turntable-tab.md) — scratch deck, Deck Chop
+  (chop a record straight onto pads), Vinyl Sim
 - [KEYS tab](usage/modules/keys/keys-tab.md) — piano roll, MIDI export/import,
   chord/melody/full-pattern generators
 - [DISCOVER tab](usage/modules/discover/discover-tab.md) — local crate browser + YouTube
